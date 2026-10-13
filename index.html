@@ -8,6 +8,9 @@
 <meta name="theme-color" content="#070b1a">
 <meta property="og:title" content="AIVA GROUP — Коммерческое предложение">
 <meta property="og:description" content="Сайты · SEO · GEO · SMM · Реклама · CRM. Всё для роста вашего бизнеса в Узбекистане.">
+<link rel="alternate" hreflang="ru" href="https://aiva-kp.vercel.app/">
+<link rel="alternate" hreflang="uz" href="https://aiva-kp.vercel.app/uz">
+<link rel="icon" href="/logo.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet">
@@ -49,6 +52,11 @@ nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:90;width
   display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 12px 10px 20px;border-radius:999px;
   background:rgba(12,18,38,.62);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid var(--line);transition:.3s}
 .logo{font-family:var(--fd);font-weight:700;font-size:15px;letter-spacing:.04em;display:flex;align-items:center;gap:10px}
+.lang{display:flex;gap:2px;padding:3px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.04);flex:none}
+.lang a{padding:6px 12px;border-radius:999px;font-size:12.5px;font-weight:800;letter-spacing:.06em;color:var(--mut);transition:.2s}
+.lang a:hover{color:#fff}
+.lang a.on{background:var(--grad);color:#fff;box-shadow:0 6px 16px -6px rgba(99,102,241,.9)}
+.nav-r{display:flex;align-items:center;gap:10px}
 .logo-img{height:30px;width:auto;display:block;filter:brightness(0) invert(1)}
 .logo b{width:30px;height:30px;border-radius:9px;background:var(--grad);display:grid;place-items:center;font-size:15px;color:#fff;box-shadow:0 6px 20px rgba(99,102,241,.5)}
 .menu{display:flex;gap:4px}
@@ -268,7 +276,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
   .mrow .opt{padding:9px 4px;text-align:center}
   .mrow .opt small{display:none}
   .plans.two{grid-template-columns:1fr}
-  .nav-cta{padding:9px 16px}
+  .nav-cta{padding:9px 14px;font-size:13px}
+  .lang a{padding:6px 10px}
+  nav{padding:8px 8px 8px 14px}
   .logo span{display:none}
   .tabs{border-radius:20px}
   .btn{padding:13px 20px}
@@ -283,7 +293,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
 <div class="grid-bg"></div>
 
 <nav>
-  <a href="#top" class="logo" aria-label="AIVA Group"><img src="logo.svg" alt="AIVA Group" class="logo-img"></a>
+  <a href="#top" class="logo" aria-label="AIVA Group"><img src="/logo.svg" alt="AIVA Group" class="logo-img"></a>
   <div class="menu" id="menu">
     <a href="#services">Услуги</a>
     <a href="#pricing">Тарифы</a>
@@ -291,7 +301,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
     <a href="#process">Процесс</a>
     <a href="#faq">Условия</a>
   </div>
-  <a class="btn btn-p nav-cta" href="#contact">Связаться</a>
+  <div class="nav-r"><div class="lang" role="group" aria-label="Language"><a href="/" hreflang="ru" class="on" aria-current="true">RU</a><a href="/uz" hreflang="uz">UZ</a></div><a class="btn btn-p nav-cta" href="#contact">Связаться</a></div>
 </nav>
 
 <!-- HERO -->
@@ -680,7 +690,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
   </div>
 </section>
 
-<footer><div class="wrap"><span><img src="logo.svg" alt="AIVA Group" class="logo-img" style="height:22px;display:inline-block;vertical-align:middle;margin-right:10px;opacity:.8">© 2026 · Google Premier Partner</span><span>Цены указаны в сумах · предложение действительно 30 дней</span></div></footer>
+<footer><div class="wrap"><span><img src="/logo.svg" alt="AIVA Group" class="logo-img" style="height:22px;display:inline-block;vertical-align:middle;margin-right:10px;opacity:.8">© 2026 · Google Premier Partner</span><span>Цены указаны в сумах · предложение действительно 30 дней</span></div></footer>
 
 <div class="modal" id="modal" aria-hidden="true"><div class="m-card" role="dialog" aria-modal="true"><button class="m-x" aria-label="Закрыть">×</button><div id="m-body"></div></div></div>
 

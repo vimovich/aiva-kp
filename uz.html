@@ -1,0 +1,801 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AIVA GROUP — Tijoriy taklif</title>
+<meta name="description" content="AIVA GROUP tijoriy taklifi: saytlar, SEO, GEO, SMM, kontekstli reklama, CRM. Toshkent, 2011-yildan beri.">
+<meta name="theme-color" content="#070b1a">
+<meta property="og:title" content="AIVA GROUP — Tijoriy taklif">
+<meta property="og:description" content="Saytlar · SEO · GEO · SMM · Reklama · CRM. Bizneslaringiz oʻsishi uchun hammasi.">
+<link rel="alternate" hreflang="ru" href="https://aiva-kp.vercel.app/">
+<link rel="alternate" hreflang="uz" href="https://aiva-kp.vercel.app/uz">
+<link rel="icon" href="/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#070b1a; --bg2:#0c1226; --card:rgba(255,255,255,.045); --line:rgba(255,255,255,.1);
+  --tx:#eef2ff; --mut:#9aa6c4; --a:#38bdf8; --b:#6366f1; --c:#22d3a6; --warm:#ffb84d;
+  --grad:linear-gradient(120deg,#38bdf8 0%,#6366f1 55%,#a855f7 100%);
+  --r:22px; --f:'Manrope',system-ui,sans-serif; --fd:'Unbounded','Manrope',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{background:var(--bg);color:var(--tx);font-family:var(--f);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
+section{padding:56px 0;position:relative}
+.eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--a);font-weight:700;display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.eyebrow::before{content:"";width:28px;height:2px;background:var(--grad);border-radius:2px}
+h2{font-family:var(--fd);font-weight:600;font-size:clamp(22px,3.4vw,34px);line-height:1.15;letter-spacing:-.02em;margin-bottom:14px}
+h2 em,h1 em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--mut);max-width:620px;font-size:17px}
+.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* background */
+.aurora{position:fixed;inset:0;z-index:-1;overflow:hidden;background:var(--bg)}
+.aurora i{position:absolute;border-radius:50%;filter:blur(110px);opacity:.5;will-change:transform}
+.aurora i:nth-child(1){width:560px;height:560px;background:#2563eb;top:-160px;left:-120px;animation:fl1 22s ease-in-out infinite}
+.aurora i:nth-child(2){width:480px;height:480px;background:#7c3aed;top:30%;right:-160px;animation:fl2 26s ease-in-out infinite}
+.aurora i:nth-child(3){width:420px;height:420px;background:#06b6d4;bottom:-140px;left:25%;opacity:.32;animation:fl3 30s ease-in-out infinite}
+.grid-bg{position:fixed;inset:0;z-index:-1;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;opacity:.18;-webkit-mask-image:radial-gradient(ellipse at 50% 20%,#000 20%,transparent 75%);mask-image:radial-gradient(ellipse at 50% 20%,#000 20%,transparent 75%)}
+@keyframes fl1{50%{transform:translate(120px,90px) scale(1.15)}}
+@keyframes fl2{50%{transform:translate(-140px,60px) scale(.9)}}
+@keyframes fl3{50%{transform:translate(90px,-80px) scale(1.2)}}
+
+/* progress + nav */
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--grad);z-index:100}
+nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:90;width:min(1120px,100% - 24px);
+  display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 12px 10px 20px;border-radius:999px;
+  background:rgba(12,18,38,.62);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid var(--line);transition:.3s}
+.logo{font-family:var(--fd);font-weight:700;font-size:15px;letter-spacing:.04em;display:flex;align-items:center;gap:10px}
+.lang{display:flex;gap:2px;padding:3px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.04);flex:none}
+.lang a{padding:6px 12px;border-radius:999px;font-size:12.5px;font-weight:800;letter-spacing:.06em;color:var(--mut);transition:.2s}
+.lang a:hover{color:#fff}
+.lang a.on{background:var(--grad);color:#fff;box-shadow:0 6px 16px -6px rgba(99,102,241,.9)}
+.nav-r{display:flex;align-items:center;gap:10px}
+.logo-img{height:30px;width:auto;display:block;filter:brightness(0) invert(1)}
+.logo b{width:30px;height:30px;border-radius:9px;background:var(--grad);display:grid;place-items:center;font-size:15px;color:#fff;box-shadow:0 6px 20px rgba(99,102,241,.5)}
+.menu{display:flex;gap:4px}
+.menu a{font-size:13.5px;font-weight:600;color:var(--mut);padding:8px 14px;border-radius:999px;transition:.2s}
+.menu a:hover,.menu a.on{color:#fff;background:rgba(255,255,255,.08)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 24px;border-radius:999px;font-weight:700;font-size:15px;transition:.25s;position:relative;overflow:hidden;white-space:nowrap}
+.btn-p{background:var(--grad);color:#fff;box-shadow:0 10px 30px -8px rgba(99,102,241,.8)}
+.btn-p:hover{transform:translateY(-2px);box-shadow:0 16px 40px -8px rgba(99,102,241,.95)}
+.btn-g{border:1px solid var(--line);background:rgba(255,255,255,.04)}
+.btn-g:hover{background:rgba(255,255,255,.1);transform:translateY(-2px)}
+.nav-cta{padding:10px 20px;font-size:13.5px}
+
+/* hero */
+.hero{display:flex;align-items:center;padding:112px 0 28px}
+.pill{display:inline-flex;align-items:center;gap:10px;padding:7px 16px 7px 8px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.04);font-size:13px;color:var(--mut);margin-bottom:18px}
+.pill span{background:var(--c);width:9px;height:9px;border-radius:50%;box-shadow:0 0 0 0 rgba(34,211,166,.7);animation:pulse 2s infinite;margin-left:6px}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(34,211,166,0)}100%{box-shadow:0 0 0 0 rgba(34,211,166,0)}}
+h1{font-family:var(--fd);font-weight:700;font-size:clamp(25px,3.3vw,44px);line-height:1.12;letter-spacing:-.025em;margin-bottom:20px;overflow-wrap:break-word}
+.hero .lead{font-size:clamp(15px,1.6vw,17px);margin-bottom:26px}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap}
+.hero-card{border-radius:26px;padding:22px;background:linear-gradient(160deg,rgba(255,255,255,.09),rgba(255,255,255,.02));border:1px solid var(--line);backdrop-filter:blur(14px);position:relative;transform-style:preserve-3d;transition:transform .15s}
+.hero-card::before{content:"";position:absolute;inset:-1px;border-radius:29px;padding:1px;background:var(--grad);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:.55;pointer-events:none}
+.hc-top{display:flex;justify-content:space-between;font-size:12px;color:var(--mut);margin-bottom:22px;letter-spacing:.08em;text-transform:uppercase}
+.hc-list{display:grid;gap:12px}
+.hc-item{display:flex;align-items:center;gap:14px;padding:10px 14px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid transparent;transition:.25s;font-weight:600;font-size:15px}
+.hc-item:hover{border-color:var(--line);background:rgba(255,255,255,.08);transform:translateX(6px)}
+.hc-item svg{width:22px;height:22px;flex:none;color:var(--a)}
+.hc-item small{white-space:nowrap;margin-left:auto;color:var(--mut);font-weight:500;font-size:12.5px}
+.hc-foot{margin-top:20px;padding-top:18px;border-top:1px dashed var(--line);font-size:13px;color:var(--mut);display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.hc-foot b{color:var(--tx)}
+
+/* stats */
+.stats{padding:0 0 20px}
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:var(--r);background:var(--card);backdrop-filter:blur(10px);overflow:hidden}
+.stat{padding:20px 22px;border-right:1px solid var(--line)}
+.stat:last-child{border:0}
+.stat b{font-family:var(--fd);font-size:clamp(22px,2.8vw,30px);display:block;line-height:1.1}
+.stat>span{color:var(--mut);font-size:13.5px}
+.stat b span{font:inherit;color:inherit}
+
+/* marquee */
+.marq{overflow:hidden;padding:18px 0 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.marq-t{display:flex;gap:44px;width:max-content;animation:mq 38s linear infinite}
+.marq:hover .marq-t{animation-play-state:paused}
+.marq-t span{font-family:var(--fd);font-size:18px;color:rgba(255,255,255,.34);white-space:nowrap;font-weight:500}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* services */
+.bento{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+.svc{border-radius:var(--r);background:var(--card);border:1px solid var(--line);backdrop-filter:blur(10px);overflow:hidden;transition:.3s;position:relative;display:flex;flex-direction:column}
+.svc::after{content:"";position:absolute;inset:0;background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%),rgba(99,102,241,.18),transparent 60%);opacity:0;transition:.3s;pointer-events:none}
+.svc:hover::after{opacity:1}
+.svc:hover{border-color:rgba(130,140,255,.45);transform:translateY(-4px)}
+.svc-h{padding:24px 24px 16px;display:flex;flex-direction:column;gap:10px;flex:1;text-align:left;width:100%;align-items:flex-start}
+.svc .acc{display:none}
+.svc-h .price-tag{margin-top:auto}
+.ico{width:50px;height:50px;border-radius:15px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(56,189,248,.2),rgba(99,102,241,.25));border:1px solid rgba(130,150,255,.3)}
+.ico svg{width:25px;height:25px;color:#bfe9ff}
+.svc h3{font-size:20px;font-weight:800;letter-spacing:-.01em}
+.svc p{color:var(--mut);font-size:14.5px}
+.price-tag{font-weight:800;font-size:15px}
+.price-tag small{color:var(--mut);font-weight:500}
+.more{display:flex;align-items:center;justify-content:space-between;padding:13px 24px;border-top:1px solid var(--line);font-size:13.5px;font-weight:700;color:var(--a);width:100%}
+.more i{width:26px;height:26px;border-radius:50%;border:1px solid var(--line);position:relative;flex:none;transition:.3s}
+.pm::before,.pm::after{content:"";position:absolute;left:50%;top:50%;background:currentColor;border-radius:2px;transition:.3s}
+.pm::before{width:11px;height:2px;margin:-1px 0 0 -5.5px}
+.pm::after{width:2px;height:11px;margin:-5.5px 0 0 -1px}
+.svc:hover .more i{background:var(--a);color:#06101f;border-color:var(--a)}
+.acc{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s cubic-bezier(.2,.8,.2,1)}
+.svc.open .acc,.faq.open .acc{grid-template-rows:1fr}
+.acc>div{overflow:hidden}
+.acc-in{padding:6px 26px 24px}
+.ticks{list-style:none;display:grid;gap:9px}
+.ticks li{position:relative;padding-left:26px;font-size:14.5px;color:#d6defa}
+.ticks li::before{content:"";position:absolute;left:0;top:6px;width:15px;height:15px;border-radius:50%;background:var(--c) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23062' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5 9-10'/%3E%3C/svg%3E") center/10px no-repeat}
+.note{margin-top:14px;font-size:13px;color:var(--mut);padding:10px 14px;border-left:2px solid var(--warm);background:rgba(255,184,77,.06);border-radius:0 10px 10px 0}
+
+/* pricing tabs */
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:24px 0 20px;padding:6px;border-radius:999px;border:1px solid var(--line);background:var(--card);width:fit-content;max-width:100%}
+.tab,.ctab{padding:10px 20px;border-radius:999px;font-weight:700;font-size:14px;color:var(--mut);transition:.25s}
+.tab:hover,.ctab:hover{color:#fff}
+.tab.on,.ctab.on{background:var(--grad);color:#fff;box-shadow:0 8px 22px -8px rgba(99,102,241,.9)}
+.panel{display:none;animation:in .5s}
+.panel.on{display:block}
+@keyframes in{from{opacity:0;transform:translateY(14px)}}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.plans.two{grid-template-columns:repeat(2,1fr)}
+.plan{border-radius:var(--r);padding:28px 26px;background:var(--card);border:1px solid var(--line);position:relative;display:flex;flex-direction:column;transition:.3s}
+.plan:hover{transform:translateY(-5px);border-color:rgba(130,140,255,.5)}
+.plan.hot{background:linear-gradient(170deg,rgba(99,102,241,.22),rgba(56,189,248,.06));border-color:rgba(130,140,255,.55)}
+.badge{position:absolute;top:-12px;right:22px;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:999px;background:var(--grad);color:#fff}
+.plan h4{font-size:15px;color:var(--mut);font-weight:700;text-transform:uppercase;letter-spacing:.1em}
+.plan .pr{font-family:var(--fd);font-size:clamp(24px,3vw,32px);font-weight:600;margin:10px 0 2px;letter-spacing:-.02em}
+.plan .pr small{font-family:var(--f);font-size:14px;color:var(--mut);font-weight:500}
+.plan .sub{color:var(--mut);font-size:13.5px;margin-bottom:18px;min-height:20px}
+.plan .ticks{margin-top:auto;padding-top:16px;border-top:1px dashed var(--line)}
+.plan .ticks li{font-size:14px}
+.pnote{margin-top:18px;color:var(--mut);font-size:13.5px}
+
+/* calculator */
+.calc{display:none;grid-template-columns:1.2fr .8fr;gap:16px}
+.calc.on{display:grid;animation:in .5s}
+.opts.show{display:flex}
+.cbox{border-radius:var(--r);padding:24px;background:var(--card);border:1px solid var(--line);backdrop-filter:blur(10px)}
+.crow{padding:18px 0;border-bottom:1px solid var(--line)}
+.crow:first-child{padding-top:0}
+.crow:last-child{border:0;padding-bottom:0}
+.chead{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:0}
+.chead b{font-size:16px}
+.chead small{display:block;color:var(--mut);font-weight:500;font-size:13px}
+.sw{position:relative;width:50px;height:28px;border-radius:99px;background:rgba(255,255,255,.12);flex:none;transition:.25s}
+.sw::after{content:"";position:absolute;top:3px;left:3px;width:22px;height:22px;border-radius:50%;background:#fff;transition:.25s}
+.sw.on{background:var(--grad)}
+.sw.on::after{left:25px}
+.opts{display:none;gap:8px;margin-top:14px;flex-wrap:wrap}
+.crow.on .opts{display:flex}
+.opt{padding:9px 16px;border-radius:12px;border:1px solid var(--line);font-size:13.5px;font-weight:700;color:var(--mut);transition:.2s}
+.opt small{display:block;font-weight:500;font-size:12px}
+.opt.on{border-color:var(--a);color:#fff;background:rgba(56,189,248,.12)}
+.sum{position:sticky;top:96px;align-self:start;background:linear-gradient(170deg,rgba(99,102,241,.25),rgba(12,18,38,.7));}
+.sum h4{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
+.sum .big{font-family:var(--fd);font-size:clamp(26px,3.4vw,36px);font-weight:600;margin:6px 0 2px;letter-spacing:-.02em;transition:.2s}
+.sum .lbl{font-size:13px;color:var(--mut);margin-bottom:18px}
+.sum hr{border:0;border-top:1px dashed var(--line);margin:16px 0}
+.sum ul{list-style:none;font-size:13.5px;color:#cfd8f5;display:grid;gap:6px;margin-bottom:18px;min-height:20px}
+.sum ul li{display:flex;justify-content:space-between;gap:10px}
+.sum ul li span{color:var(--mut);white-space:nowrap}
+.sum .btn{width:100%;justify-content:center}
+
+/* package months */
+.pk{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:28px;position:relative}
+.step{padding:22px 20px;border-radius:var(--r);background:var(--card);border:1px solid var(--line);position:relative}
+.step .n{font-family:var(--fd);font-size:40px;font-weight:700;line-height:1;margin-bottom:14px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.step h4{font-size:17px;margin-bottom:6px}
+.step p{font-size:14px;color:var(--mut)}
+.step small{display:inline-block;margin-top:12px;font-size:12px;color:var(--c);font-weight:700}
+
+/* faq */
+.faqs{display:grid;gap:10px;margin-top:28px;max-width:860px}
+.faq{border-radius:18px;border:1px solid var(--line);background:var(--card);overflow:hidden;transition:.3s}
+.faq.open{border-color:rgba(130,140,255,.45)}
+.faq>button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 24px;text-align:left;font-weight:700;font-size:16px}
+.faq>button i{width:28px;height:28px;border-radius:50%;border:1px solid var(--line);position:relative;flex:none;transition:.3s}
+.faq.open>button i{transform:rotate(45deg);background:var(--a);color:#06101f;border-color:var(--a)}
+.faq .acc-in{padding:0 24px 22px;color:var(--mut);font-size:15px}
+
+/* contact */
+.contact{padding-bottom:40px}
+.cta-card{border-radius:30px;padding:clamp(26px,4vw,48px);position:relative;overflow:hidden;background:linear-gradient(135deg,#1e3a8a 0%,#4338ca 55%,#7e22ce 100%);border:1px solid rgba(255,255,255,.2)}
+.cta-card::before{content:"";position:absolute;width:520px;height:520px;right:-120px;top:-200px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.28),transparent 65%)}
+.cta-card h2{position:relative;max-width:640px}
+.cta-card p.lead{color:#dfe5ff;position:relative}
+.cgrid{position:relative;align-items:stretch;display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:34px;max-width:760px}
+.cl{display:flex;align-items:center;gap:14px;padding:16px 18px;border-radius:18px;background:rgba(7,11,26,.35);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(8px);transition:.25s}
+.cl:hover{background:rgba(7,11,26,.6);transform:translateY(-3px)}
+.cl svg{width:24px;height:24px;flex:none}
+.cl small{display:block;font-size:12px;color:#c7d0ff;line-height:1.2}
+.cl b{font-size:15.5px;line-height:1.3}
+.cta-btns{position:relative;display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn-w{background:#fff;color:#1e1b4b}
+.btn-w:hover{transform:translateY(-2px);box-shadow:0 14px 34px -10px rgba(0,0,0,.6)}
+footer{padding:26px 0 40px;color:var(--mut);font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:24px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}
+
+.fab{position:fixed;right:18px;bottom:18px;z-index:80;width:56px;height:56px;border-radius:50%;background:var(--grad);display:grid;place-items:center;box-shadow:0 12px 30px -6px rgba(99,102,241,.9);transition:.25s}
+.fab:hover{transform:scale(1.08) rotate(-8deg)}
+.fab svg{width:26px;height:26px;color:#fff}
+
+
+.modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(4,7,18,.7);backdrop-filter:blur(8px)}
+.modal.on{display:flex;animation:fade .25s}
+@keyframes fade{from{opacity:0}}
+.m-card{width:min(560px,100%);max-height:calc(100svh - 32px);overflow:auto;border-radius:26px;padding:28px;background:linear-gradient(170deg,#141c3a,#0b1022);border:1px solid rgba(130,140,255,.4);position:relative;animation:pop .35s cubic-bezier(.2,.8,.2,1)}
+@keyframes pop{from{transform:translateY(24px) scale(.97);opacity:0}}
+.m-x{position:absolute;top:14px;right:14px;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);font-size:22px;line-height:1;display:grid;place-items:center}
+.m-x:hover{background:rgba(255,255,255,.1)}
+.m-card h3{font-size:22px;font-weight:800;margin:14px 0 6px}
+.m-card .price-tag{margin-bottom:16px}
+.m-card .btn{margin-top:20px;width:100%;justify-content:center}
+.mrow{padding-bottom:18px;margin-bottom:18px;border-bottom:1px solid var(--line)}
+.mrow b{font-size:16px}
+.mrow .opts{margin-top:12px}
+@media(max-width:1080px){.hero-grid{grid-template-columns:1fr;gap:28px}}
+@media(max-width:960px){
+  .menu{display:none}
+  .hero-grid{grid-template-columns:1fr;gap:28px}
+  .bento{grid-template-columns:repeat(2,1fr)}
+  .hero{padding-top:96px}
+  .plans,.pk{grid-template-columns:1fr}
+  .calc.on{grid-template-columns:1fr}
+  .sum{position:static}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .stats-row{grid-template-columns:repeat(2,1fr)}
+  .stat:nth-child(2){border-right:0}
+  .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+}
+@media(max-width:620px){
+  section{padding:40px 0}
+  .hero{padding:104px 0 16px}
+  .hc-foot{display:none}
+  .hero-card{padding:16px}
+  .m-card{padding:22px}
+  .cbox{padding:18px}
+  .bento,.steps,.cgrid{grid-template-columns:1fr}
+  .svc-h{padding:20px 20px 12px}
+  .step{padding:18px}
+  .mrow .opts{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+  .mrow .opt{padding:9px 4px;text-align:center}
+  .mrow .opt small{display:none}
+  .plans.two{grid-template-columns:1fr}
+  .nav-cta{padding:9px 14px;font-size:13px}
+  .lang a{padding:6px 10px}
+  nav{padding:8px 8px 8px 14px}
+  .logo span{display:none}
+  .tabs{border-radius:20px}
+  .btn{padding:13px 20px}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+@media print{.aurora,.grid-bg,nav,.fab,.progress{display:none}body{background:#fff;color:#000}.rv{opacity:1;transform:none}.acc{grid-template-rows:1fr!important}}
+</style>
+</head>
+<body>
+<div class="progress" id="prog"></div>
+<div class="aurora"><i></i><i></i><i></i></div>
+<div class="grid-bg"></div>
+
+<nav>
+  <a href="#top" class="logo" aria-label="AIVA Group"><img src="/logo.svg" alt="AIVA Group" class="logo-img"></a>
+  <div class="menu" id="menu">
+    <a href="#services">Xizmatlar</a>
+    <a href="#pricing">Tariflar</a>
+    <a href="#calc">Kalkulyatorlar</a>
+    <a href="#process">Jarayon</a>
+    <a href="#faq">Shartlar</a>
+  </div>
+  <div class="nav-r"><div class="lang" role="group" aria-label="Language"><a href="/" hreflang="ru">RU</a><a href="/uz" hreflang="uz" class="on" aria-current="true">UZ</a></div><a class="btn btn-p nav-cta" href="#contact">Bogʻlanish</a></div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="pill rv"><span></span>Tijoriy taklif · 2026</div>
+      <h1 class="rv d1"><em>Mijoz olib keladigan</em> internet-marketing, shunchaki «trafik» emas</h1>
+      <p class="lead rv d2">AIVA GROUP — Toshkentdagi veb-studiya. Saytlar yaratamiz va mijozning butun yoʻlini quramiz: Google, Yandex va sunʻiy intellektdagi qidiruvdan tortib CRM tizimingizdagi arizagacha. Quyida — barcha xizmatlarimiz va shaffof narxlar.</p>
+      <div class="cta-row rv d3">
+        <a href="#calc" class="btn btn-p">Narxni hisoblash
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="#services" class="btn btn-g">Xizmatlarni koʻrish</a>
+      </div>
+    </div>
+    <aside class="hero-card rv d2" id="tilt">
+      <div class="hc-top"><span>Taklif tarkibi</span><span>asosiy xizmatlar</span></div>
+      <div class="hc-list">
+        <a href="#s-web" class="hc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8"/></svg>Saytlar yaratish<small>5 mln dan</small></a>
+        <a href="#s-seo" class="hc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>SEO-targʻibot<small>3,5 mln/oy</small></a>
+        <a href="#s-geo" class="hc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 17l.8 2.2L22 20l-2.2.8L19 23l-.8-2.2L16 20l2.2-.8z"/></svg>GEO — SI qidiruvi<small>5 mln/oy</small></a>
+        <a href="#s-smm" class="hc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6"/></svg>SMM va target<small>3 mln dan/oy</small></a>
+        <a href="#s-ads" class="hc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11v2a1 1 0 0 0 1 1h3l6 4V6L7 10H4a1 1 0 0 0-1 1z"/><path d="M17 8a5 5 0 0 1 0 8"/></svg>Kontekstli reklama<small>2,2 mln dan</small></a>
+        <a href="#s-crm" class="hc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 15 4-5 3 3 5-7"/></svg>CRM va avtomatlashtirish<small>smeta boʻyicha</small></a>
+      </div>
+      <div class="hc-foot"><span>Sayt auditi — <b>bepul</b></span><span>Narxlar soʻmda</span></div>
+    </aside>
+  </div>
+</header>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="wrap">
+    <div class="stats-row rv">
+      <div class="stat"><b class="grad-text"><span data-n="2011">0</span></b><span>tashkil topgan yil</span></div>
+      <div class="stat"><b class="grad-text"><span data-n="15">0</span>+</b><span>yildan ortiq MDH bozoridagi tajriba</span></div>
+      <div class="stat"><b class="grad-text">TOP-3%</b><span>mintaqadagi agentliklar · Google Premier Partner</span></div>
+      <div class="stat"><b class="grad-text">TOP-10</b><span>mijozlar uchun Google va Yandexdagi maqsad</span></div>
+    </div>
+    <div class="marq" aria-label="Loyihalarimiz">
+      <div class="marq-t" id="marq"></div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="eyebrow rv">Xizmatlar</div>
+    <h2 class="rv">Oʻsish uchun hammasi — <em>bir tom ostida</em></h2>
+    <p class="lead rv">Xizmat tarkibi va narxini koʻrish uchun kartochkani bosing.</p>
+
+    <div class="bento">
+      <article class="svc rv" id="s-web">
+        <button class="svc-h" aria-expanded="false">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8M12 18v3"/></svg></div>
+          <h3>Saytlarni yaratish va qoʻllab-quvvatlash</h3>
+          <p>Lendinglar, korporativ saytlar, internet-doʻkonlar va veb-servislar — tez, adaptiv, reklama va SEOga tayyor.</p>
+          <div class="price-tag">5 000 000 <small>soʻmdan</small></div>
+        </button>
+        <div class="acc"><div><div class="acc-in">
+          <ul class="ticks">
+            <li><b>Lending</b> — 5 000 000 soʻmdan, muddati 2 kundan</li>
+            <li><b>Korporativ sayt</b> — hajmiga qarab, muddati 1–2 hafta</li>
+            <li><b>Internet-doʻkon</b> — katalog, savat, toʻlov, yetkazib berish, 1C integratsiyasi; muddati 3 haftadan</li>
+            <li><b>Veb-servis</b> — shaxsiy kabinetlar, kalkulyatorlar, portallar; texnik topshiriq boʻyicha</li>
+            <li>WordPress / WooCommerce, 1C-Bitrix, freymvorklar</li>
+            <li><b>Saytni qoʻllab-quvvatlash</b> (soʻrov boʻyicha): yangilanishlar, zaxira nusxalar, buzilishdan himoya, tezlik nazorati, kontent tahrirlari; hosting va domenlarni oʻzimiz yuritishimiz mumkin</li>
+          </ul>
+          <div class="note">Toʻlov shartlari shartnomada qayd etiladi. Yirik loyihalar narxi smeta boʻyicha hisoblanadi.</div>
+        </div></div></div>
+        <button class="more" tabindex="-1" aria-hidden="true">Batafsil <i class="pm"></i></button>
+      </article>
+
+      <article class="svc rv d1" id="s-seo">
+        <button class="svc-h" aria-expanded="false">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></div>
+          <h3>SEO-targʻibot</h3>
+          <p>Saytingizni Google va Yandexda ariza va savdo olib keladigan soʻrovlar boʻyicha TOPga chiqaramiz.</p>
+          <div class="price-tag">3 500 000 <small>soʻm / oy</small></div>
+        </button>
+        <div class="acc"><div><div class="acc-in">
+          <ul class="ticks">
+            <li><b>Audit:</b> indekslash xatolari, raqobatchilar, pozitsiyalar, tezlik, mobil versiya</li>
+            <li><b>Semantika:</b> soʻrovlarni yigʻish va klasterlash, relevantlik xaritasi</li>
+            <li><b>Texnika:</b> meta-teglar, Schema.org, sitemap, Core Web Vitals, ichki havolalar</li>
+            <li><b>Kontent:</b> SEO-matnlar, maqolalar, sunʻiy intellekt qidiruviga moslash</li>
+            <li><b>Havolalar:</b> «oq» usullar, kataloglar, xaritalar, kraud-marketing</li>
+            <li><b>Hisobot:</b> Analytics va Metrika, tahlil boʻyicha oylik hisobot va haftalik oraliq hisobotlar</li>
+          </ul>
+          <div class="note">Pozitsiyalardagi dastlabki oʻzgarishlar — 1–2 oydan keyin, trafikning sezilarli oʻsishi — 3–6 oydan keyin.</div>
+        </div></div></div>
+        <button class="more" tabindex="-1" aria-hidden="true">Batafsil <i class="pm"></i></button>
+      </article>
+
+      <article class="svc rv d2" id="s-geo">
+        <button class="svc-h" aria-expanded="false">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 17l.8 2.2L22 20l-2.2.8L19 23l-.8-2.2L16 20l2.2-.8z"/></svg></div>
+          <h3>GEO · AEO · AIO</h3>
+          <p>ChatGPT, Gemini va Google AI aynan sizning kompaniyangizni tavsiya qilishi uchun.</p>
+          <div class="price-tag">5 000 000 <small>soʻm / oy</small></div>
+        </button>
+        <div class="acc"><div><div class="acc-in">
+          <ul class="ticks">
+            <li><b>GEO</b> — ChatGPT, Gemini va boshqa SI-qidiruvlar javoblarida brend koʻrinishi</li>
+            <li><b>AEO</b> — ovozli qidiruv va tezkor javob bloklariga moslash</li>
+            <li><b>AIO</b> — sayt kontenti va tuzilmasini AI-qidiruvga moslash</li>
+          </ul>
+          <div class="note">Mijozlar tobora koʻproq qidiruv tizimiga emas, sunʻiy intellektga savol bermoqda — GEO bu kanalni oldindan yopadi.</div>
+        </div></div></div>
+        <button class="more" tabindex="-1" aria-hidden="true">Batafsil <i class="pm"></i></button>
+      </article>
+
+      <article class="svc rv" id="s-smm">
+        <button class="svc-h" aria-expanded="false">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6"/></svg></div>
+          <h3>SMM va target</h3>
+          <p>Instagram yuritish: strategiya, dizayn, kontent, Reels montaji va target. Tariflar 3 / 4 / 5,5 mln.</p>
+          <div class="price-tag">3 000 000 <small>soʻmdan / oy</small></div>
+        </button>
+        <div class="acc"><div><div class="acc-in">
+          <ul class="ticks">
+            <li>Strategiya va profilni qadoqlash, «Dolzarb» boʻlimi</li>
+            <li>Postlar, Reels (montaj), stories — tanlangan tarifga muvofiq</li>
+            <li>Sotuvchi matnlar, hashtaglar, administrator, auditoriya bilan ishlash</li>
+            <li>Targetli kampaniyalarni sozlash va ishga tushirish</li>
+            <li><b>Tariflar:</b> Silver 3 000 000 · Gold 4 000 000 · Platinum 5 500 000 soʻm oyiga</li>
+          </ul>
+          <div class="note">Bu SMM, mobilografiya emas: biz akkauntni yuritamiz va kontentni montaj qilamiz. Syomka va chiqishlar alohida kelishiladi, tarif byudjetiga kirmaydi. Instagram reklama byudjeti alohida toʻlanadi.</div>
+        </div></div></div>
+        <button class="more" tabindex="-1" aria-hidden="true">Batafsil <i class="pm"></i></button>
+      </article>
+
+      <article class="svc rv d1" id="s-ads">
+        <button class="svc-h" aria-expanded="false">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11v2a1 1 0 0 0 1 1h3l6 4V6L7 10H4a1 1 0 0 0-1 1z"/><path d="M17 8a5 5 0 0 1 0 8"/></svg></div>
+          <h3>Kontekstli reklama</h3>
+          <p>Google Ads, Yandex.Direct, Shopping va remarketing. Qoʻllab-quvvatlash — oyiga 2 mln.</p>
+          <div class="price-tag">2 200 000 <small>soʻmdan</small></div>
+        </button>
+        <div class="acc"><div><div class="acc-in">
+          <ul class="ticks">
+            <li>Soʻrovlarni tanlash, byudjet prognozi, UTM-teglar</li>
+            <li>Geo- va vaqt targetingi, moslashuvchan strategiyalar</li>
+            <li>Google Analytics sozlash, lending sahifalar auditi</li>
+            <li>Call Tracking va konversiya boʻyicha tavsiyalar (Gold, Platinum)</li>
+            <li>Kampaniyalarni oylik optimallashtirish va arizalar boʻyicha hisobot</li>
+            <li><b>Narxlar:</b> sozlash Silver 2 200 000 dan · Gold 3 000 000 dan · Platinum 3 800 000 dan; qoʻllab-quvvatlash — kabinet uchun oyiga 2 000 000 soʻm</li>
+          </ul>
+          <div class="note">Reklama byudjeti toʻgʻridan-toʻgʻri Google / Yandexga toʻlanadi va narxga kirmaydi.</div>
+        </div></div></div>
+        <button class="more" tabindex="-1" aria-hidden="true">Batafsil <i class="pm"></i></button>
+      </article>
+
+      <article class="svc rv" id="s-crm">
+        <button class="svc-h" aria-expanded="false">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 15 4-5 3 3 5-7"/></svg></div>
+          <h3>CRM va avtomatlashtirish</h3>
+          <p>Arizalarni bir oynada yigʻamiz: voronkalar, bitimlar, sayt, messenjerlar va telefoniya bilan integratsiyalar.</p>
+          <div class="price-tag">smeta boʻyicha <small>vazifangizga qarab</small></div>
+        </button>
+        <div class="acc"><div><div class="acc-in">
+          <ul class="ticks">
+            <li>CRM joriy etish — emyCRM (AIVA ishlanmasi) yoki vazifaga mos boshqa tizim</li>
+            <li>Sotuv voronkalari, bitimlar, avtomatlashtirish</li>
+            <li>Integratsiyalar: sayt, WhatsApp, telefoniya, 1C</li>
+            <li>Xodimlarni oʻqitish va qoʻllab-quvvatlash</li>
+          </ul>
+        </div></div></div>
+        <button class="more" tabindex="-1" aria-hidden="true">Batafsil <i class="pm"></i></button>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="wrap">
+    <div class="eyebrow rv">Tariflar</div>
+    <h2 class="rv">Shaffof narxlar — <em>yashirin toʻlovlarsiz</em></h2>
+    <p class="lead rv">Barcha summalar soʻmda koʻrsatilgan. Aniq smetani saytingiz bepul auditidan keyin tayyorlaymiz.</p>
+
+    <div class="tabs rv" role="tablist" id="tabs">
+      <button class="tab on" data-t="seo" role="tab">SEO va GEO</button>
+      <button class="tab" data-t="smm" role="tab">SMM</button>
+      <button class="tab" data-t="ads" role="tab">Reklama</button>
+      <button class="tab" data-t="web" role="tab">Saytlar</button>
+    </div>
+
+    <div class="panel on" id="p-seo">
+      <div class="plans two">
+        <div class="plan">
+          <h4>SEO-targʻibot</h4>
+          <div class="pr">3 500 000 <small>soʻm / oy</small></div>
+          <div class="sub">Google + Yandex, oylik toʻlov</div>
+          <ul class="ticks"><li>Audit va strategiya</li><li>Semantika va klasterlash</li><li>Texnik optimallashtirish</li><li>Kontent va havolalar</li><li>Oylik hisobot</li></ul>
+        </div>
+        <div class="plan hot">
+          <span class="badge">Yangi yoʻnalish</span>
+          <h4>GEO-targʻibot</h4>
+          <div class="pr">5 000 000 <small>soʻm / oy</small></div>
+          <div class="sub">ChatGPT, Gemini, Google AIda koʻrinish</div>
+          <ul class="ticks"><li>GEO — SI javoblarida brend eslatmalari</li><li>AEO — tezkor javoblar va ovozli qidiruv</li><li>AIO — tuzilma va kontentni AI-qidiruvga moslash</li></ul>
+        </div>
+      </div>
+      <div class="pk">
+        <div class="plan"><h4>3 oylik kurs</h4><div class="pr">10 500 000 <small>soʻm</small></div><div class="sub">3 × 3 500 000</div><ul class="ticks"><li>Audit, strategiya</li><li>1–2 hudud uchun yadro</li><li>Texnika va asosiy kontent</li></ul></div>
+        <div class="plan hot"><span class="badge">Foydali</span><h4>6 oylik kurs</h4><div class="pr">19 800 000 <small>soʻm</small></div><div class="sub">3 oylik kursdagi hammasi, plyus</div><ul class="ticks"><li>Kengaytirilgan yadro va hududlar</li><li>Kontent-reja, blog maqolalari</li><li>Havolalar sonini oshirish</li></ul></div>
+        <div class="plan"><h4>1 yillik kurs</h4><div class="pr">39 000 000 <small>soʻm</small></div><div class="sub">6 oylik kursdagi hammasi, plyus</div><ul class="ticks"><li>Maksimal yadro, katalog kategoriyalari</li><li>Kuchaytirilgan kontent va linkbilding</li><li>Ustuvor qoʻllab-quvvatlash</li></ul></div>
+      </div>
+      <p class="pnote">6 oylik va 1 yillik paketlar oylik toʻlovga nisbatan chegirma bilan.</p>
+    </div>
+
+    <div class="panel" id="p-smm">
+      <div class="plans">
+        <div class="plan"><h4>Silver · kichik biznes uchun</h4><div class="pr">3 000 000 <small>soʻm / oy</small></div><div class="sub">Instagramni toʻliq yuritish</div>
+          <ul class="ticks"><li>SMM-strategiya, profil dizayni</li><li>10 ta post · 3 ta Reels · 10 ta stories</li><li>3 ta targetli kampaniya</li><li>Hashtaglar va administrator</li></ul></div>
+        <div class="plan hot"><span class="badge">Ommabop</span><h4>Gold · oʻsayotgan kompaniyalar uchun</h4><div class="pr">4 000 000 <small>soʻm / oy</small></div><div class="sub">Strategiya + auditoriya bilan ishlash</div>
+          <ul class="ticks"><li>Dizayn va «Dolzarb»</li><li>15 ta post · 6 ta Reels · 15 ta stories</li><li>5 ta targetli kampaniya</li><li>Sotuvchi matnlar</li></ul></div>
+        <div class="plan"><h4>Platinum · premium</h4><div class="pr">5 500 000 <small>soʻm / oy</small></div><div class="sub">Kompleks yuritish</div>
+          <ul class="ticks"><li>Strategiya ishlab chiqish, dizayn</li><li>20 ta post · 9 ta Reels · 25 ta stories</li><li>8 ta targetli kampaniya</li><li>Promoaksiyalar, tanlovlar, ustuvorlik</li></ul></div>
+      </div>
+      <p class="pnote">Bu yuritish va montaj, mobilografiya emas — syomka alohida kelishiladi, tarif byudjetiga kirmaydi. Instagram reklama byudjeti alohida toʻlanadi.</p>
+    </div>
+
+    <div class="panel" id="p-ads">
+      <div class="plans">
+        <div class="plan"><h4>Silver · Start</h4><div class="pr">2 200 000 <small>soʻmdan</small></div><div class="sub">Kabinetni sozlash</div>
+          <ul class="ticks"><li>1 ta kampaniya, 50 tagacha ibora</li><li>UTM, geo- va vaqt targetingi</li><li>Google Analytics, byudjet prognozi</li><li>Hisobot</li></ul></div>
+        <div class="plan hot"><span class="badge">Optimum</span><h4>Gold</h4><div class="pr">3 000 000 <small>soʻmdan</small></div><div class="sub">Kabinetni sozlash</div>
+          <ul class="ticks"><li>3 tagacha kampaniya, 100 tagacha ibora</li><li>Silverdagi hammasi</li><li>Call Tracking</li><li>Konversiya boʻyicha tavsiyalar</li></ul></div>
+        <div class="plan"><h4>Platinum · Maksimum</h4><div class="pr">3 800 000 <small>soʻmdan</small></div><div class="sub">Kabinetni sozlash</div>
+          <ul class="ticks"><li>7 tagacha kampaniya, 200 tagacha ibora</li><li>Goldagi hammasi</li><li>Maksimal qamrov</li></ul></div>
+      </div>
+      <div class="plans two" style="margin-top:16px">
+        <div class="plan"><h4>Reklamani qoʻllab-quvvatlash</h4><div class="pr">2 000 000 <small>soʻm / oy, kabinet uchun</small></div><div class="sub">Google Ads yoki Yandex.Direct</div><ul class="ticks"><li>Stavka va byudjetni kundalik nazorat qilish</li><li>Optimallashtirish va arizalar boʻyicha hisobot</li></ul></div>
+        <div class="plan"><h4>Kanallar</h4><div class="pr" style="font-size:22px">Google · Yandex</div><div class="sub">Shopping va remarketing — zarurat boʻlsa</div><ul class="ticks"><li>Reklama byudjeti — alohida, toʻgʻridan-toʻgʻri reklama tizimlariga</li></ul></div>
+      </div>
+    </div>
+
+    <div class="panel" id="p-web">
+      <div class="plans">
+        <div class="plan hot"><span class="badge">Tez start</span><h4>Lending</h4><div class="pr">5 000 000 <small>soʻmdan</small></div><div class="sub">Muddati 2 kundan</div><ul class="ticks"><li>Reklama uchun bir sahifali sayt</li><li>Adaptivlik va tez yuklanish</li><li>Ariza shakllari va analitika</li></ul></div>
+        <div class="plan"><h4>Korporativ sayt</h4><div class="pr">smeta boʻyicha</div><div class="sub">Muddati 1–2 hafta</div><ul class="ticks"><li>Kompaniya, xizmatlar, jamoa</li><li>SEO-asos va adaptivlik</li></ul></div>
+        <div class="plan"><h4>Internet-doʻkon</h4><div class="pr">smeta boʻyicha</div><div class="sub">Muddati 3 haftadan</div><ul class="ticks"><li>Katalog, savat, toʻlov, yetkazib berish</li><li>1C bilan integratsiya</li></ul></div>
+      </div>
+      <p class="pnote">Yuridik shartnoma asosida ishlaymiz, toʻlov shartlari unda qayd etiladi. Veb-servislar (kabinetlar, kalkulyatorlar, portallar) — texnik topshiriq boʻyicha.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CALCULATOR -->
+<section id="calc">
+  <div class="wrap">
+    <div class="eyebrow rv">Kalkulyatorlar</div>
+    <h2 class="rv"><em>Oʻz paketingizni</em> yigʻing</h2>
+    <div class="tabs rv" id="ctabs">
+      <button class="ctab on" data-c="once">Bir martalik xizmatlar</button>
+      <button class="ctab" data-c="month">Oylik xizmatlar</button>
+    </div>
+
+    <div class="calc on" id="c-once">
+      <div class="cbox" id="box-once">
+        <div class="crow" data-k="land" data-o="5000000">
+          <div class="chead"><div><b>Lending</b><small>5 000 000 soʻmdan, muddati 2 kundan</small></div><span class="sw"></span></div>
+        </div>
+        <div class="crow" data-k="adset">
+          <div class="chead"><div><b>Reklamani sozlash</b><small>Google Ads / Yandex.Direct</small></div><span class="sw"></span></div>
+          <div class="opts" data-g="tier">
+            <button class="opt on" data-o="2200000" data-nm="Silver">Silver<small>2 200 000</small></button>
+            <button class="opt" data-o="3000000" data-nm="Gold">Gold<small>3 000 000</small></button>
+            <button class="opt" data-o="3800000" data-nm="Platinum">Platinum<small>3 800 000</small></button>
+          </div>
+          <div class="opts" data-g="cab">
+            <button class="opt on" data-mul="1">1 kabinet</button>
+            <button class="opt" data-mul="2">2 kabinet (Google + Yandex)</button>
+          </div>
+        </div>
+      </div>
+      <aside class="cbox sum">
+        <h4>Bir martalik ishlar</h4>
+        <div class="big" id="once-t">0</div>
+        <div class="lbl">soʻm, bir marta</div>
+        <hr>
+        <ul id="once-l"></ul>
+        <a class="btn btn-p" href="#contact">Hisob-kitobni muhokama qilish</a>
+        <p style="font-size:12px;color:var(--mut);margin-top:12px">Korporativ saytlar, internet-doʻkonlar va CRM auditdan soʻng smeta boʻyicha hisoblanadi. Shartnoma asosida ishlaymiz.</p>
+      </aside>
+    </div>
+
+    <div class="calc" id="c-month">
+      <div class="cbox" id="box-month">
+        <div class="mrow">
+          <b>Ish muddati</b>
+          <div class="opts show" id="months">
+            <button class="opt" data-v="1">1 oy</button>
+            <button class="opt" data-v="3">3 oy</button>
+            <button class="opt on" data-v="6">6 oy<small>foydaliroq</small></button>
+            <button class="opt" data-v="12">12 oy<small>maks. foyda</small></button>
+          </div>
+        </div>
+        <div class="crow" data-k="seo">
+          <div class="chead"><div><b>SEO-targʻibot</b><small>3 500 000 / oy · 3, 6, 12 oylik paketlar chegirma bilan</small></div><span class="sw"></span></div>
+        </div>
+        <div class="crow" data-k="geo">
+          <div class="chead"><div><b>GEO-targʻibot</b><small>5 000 000 soʻm / oy</small></div><span class="sw"></span></div>
+        </div>
+        <div class="crow" data-k="smm">
+          <div class="chead"><div><b>SMM Instagram</b><small>tarifni tanlang</small></div><span class="sw"></span></div>
+          <div class="opts" data-g="tier">
+            <button class="opt on" data-m="3000000" data-nm="Silver">Silver<small>3 000 000</small></button>
+            <button class="opt" data-m="4000000" data-nm="Gold">Gold<small>4 000 000</small></button>
+            <button class="opt" data-m="5500000" data-nm="Platinum">Platinum<small>5 500 000</small></button>
+          </div>
+        </div>
+        <div class="crow" data-k="adsup">
+          <div class="chead"><div><b>Reklamani qoʻllab-quvvatlash</b><small>kabinet uchun oyiga 2 000 000 soʻm</small></div><span class="sw"></span></div>
+          <div class="opts" data-g="cab">
+            <button class="opt on" data-mul="1">1 kabinet</button>
+            <button class="opt" data-mul="2">2 kabinet</button>
+          </div>
+        </div>
+      </div>
+      <aside class="cbox sum">
+        <h4>Jami <span id="m-n">6</span> oy uchun</h4>
+        <div class="big" id="m-t">0</div>
+        <div class="lbl">soʻm · oʻrtacha <span id="m-avg">0</span> / oy</div>
+        <div class="lbl" id="m-save" style="color:var(--c)"></div>
+        <hr>
+        <ul id="m-l"></ul>
+        <a class="btn btn-p" href="#contact">Hisob-kitobni muhokama qilish</a>
+        <p style="font-size:12px;color:var(--mut);margin-top:12px">Reklama byudjetlari va QQS kiritilmagan. SEO: 3 / 6 / 12 oy uchun 10,5 / 19,8 / 39 mln paketlar.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="wrap">
+    <div class="eyebrow rv">Qanday ishlaymiz</div>
+    <h2 class="rv">Arizadan <em>natijagacha</em> — 4 qadam</h2>
+    <div class="steps">
+      <div class="step rv"><div class="n">01</div><h4>Bepul audit</h4><p>Saytni, raqobatchilarni va joriy pozitsiyalarni tahlil qilamiz, oʻsish nuqtalarini aniqlaymiz.</p><small>1–3 kun</small></div>
+      <div class="step rv d1"><div class="n">02</div><h4>Strategiya va smeta</h4><p>Maqsadlar, kanallar va byudjetni kelishamiz. Hammasini shartnomada qayd etamiz.</p><small>3 kungacha</small></div>
+      <div class="step rv d2"><div class="n">03</div><h4>Ishlarni boshlash</h4><p>Texnika, semantika, kontent, reklama, dizayn — reja boʻyicha boshlaymiz.</p><small>1-haftadan</small></div>
+      <div class="step rv d3"><div class="n">04</div><h4>Hisobotlar va oʻsish</h4><p>Haftalik oraliq hisobotlar va tahlil boʻyicha oylik hisobot, strategiyani tuzatish.</p><small>har hafta va har oy</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="eyebrow rv">Shartlar</div>
+    <h2 class="rv">Muhim <em>tafsilotlar</em></h2>
+    <div class="faqs">
+      <div class="faq rv"><button aria-expanded="false">Narxga nima kiradi va nima alohida toʻlanadi?<i class="pm"></i></button><div class="acc"><div><div class="acc-in">Narxga AIVA GROUP mutaxassislarining ishi kiradi. Reklama byudjetlari (Google Ads, Yandex.Direct, Instagramdagi target) alohida, toʻgʻridan-toʻgʻri reklama tizimlariga toʻlanadi. SMM uchun kontent syomkasi alohida kelishiladi.</div></div></div></div>
+      <div class="faq rv"><button aria-expanded="false">Toʻlov qanday amalga oshiriladi?<i class="pm"></i></button><div class="acc"><div><div class="acc-in">Rasmiy ishlaymiz, yuridik shartnoma asosida: unda ish hajmi, muddatlar va narxni qayd etamiz. Barcha yopuvchi hujjatlarni taqdim etamiz va ular bilan Didox orqali almashamiz. Toʻlov tartibini individual kelishamiz va shartnomada mustahkamlaymiz.</div></div></div></div>
+      <div class="faq rv"><button aria-expanded="false">Birinchi natijalar qachon boʻladi?<i class="pm"></i></button><div class="acc"><div><div class="acc-in">Kontekstli reklama ishga tushgandan keyingi dastlabki haftalardayoq birinchi arizalarni beradi. SEOda pozitsiyalar 1–2 oydan keyin oʻzgara boshlaydi, trafikning sezilarli oʻsishi esa 3–6 oydan keyin keladi.</div></div></div></div>
+      <div class="faq rv"><button aria-expanded="false">Qanday hisobot berasiz?<i class="pm"></i></button><div class="acc"><div><div class="acc-in">Oyda bir marta — analitika boʻyicha toʻliq hisobot: pozitsiyalar, trafik va arizalar, «koʻrsatuvlar» emas. Bundan tashqari, har hafta oraliq hisobot yuboramiz: nima qilindi va koʻrsatkichlar qanday oʻzgarmoqda. Google Analytics va Yandex.Metrikani sozlaymiz, shuning uchun haqiqiy raqamlarni doim koʻrasiz.</div></div></div></div>
+      <div class="faq rv"><button aria-expanded="false">Xizmatlarning faqat bir qismini olsa boʻladimi?<i class="pm"></i></button><div class="acc"><div><div class="acc-in">Ha. Har bir yoʻnalish alohida sotiladi, eng yaxshi samarani esa bogʻlam beradi: sayt + SEO + reklama + CRM. Paketni yuqoridagi kalkulyatorda yigʻing.</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="cta-card rv">
+      <div class="eyebrow" style="color:#fff">Boshlaymizmi?</div>
+      <h2>Bepul audit va aniq smetani oling</h2>
+      <p class="lead">Yozing yoki qoʻngʻiroq qiling — vazifangizga mos shaxsiy taklif tayyorlaymiz.</p>
+      <div class="cgrid">
+        <a class="cl" href="tel:+998900044442"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><div><small>Telefon</small><b>+998 90 004 44 42</b></div></a>
+        <a class="cl" href="https://t.me/aivauz" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m22 3-20 8 6 2 2 7 3-4 5 4z"/><path d="m8 13 9-6"/></svg><div><small>Telegram</small><b>@aivauz</b></div></a>
+        <a class="cl" href="https://aivagroup.uz" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z"/></svg><div><small>Sayt</small><b>aivagroup.uz</b></div></a>
+        <a class="cl" href="https://yandex.uz/maps/-/CPToN-zk" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.800 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><div><small>Manzil · du–ju 10:00–19:00</small><b>Toshkent sh., Buyuk Turon koʻchasi, 77</b></div></a>
+      </div>
+      <div class="cta-btns">
+        <a class="btn btn-w" href="https://t.me/aivauz" target="_blank" rel="noopener">Telegramda yozish</a>
+        <a class="btn btn-g" href="tel:+998900044442" style="border-color:rgba(255,255,255,.4)">Qoʻngʻiroq qilish</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap"><span><img src="/logo.svg" alt="AIVA Group" class="logo-img" style="height:22px;display:inline-block;vertical-align:middle;margin-right:10px;opacity:.8">© 2026 · Google Premier Partner</span><span>Narxlar soʻmda koʻrsatilgan · taklif 30 kun amal qiladi</span></div></footer>
+
+<div class="modal" id="modal" aria-hidden="true"><div class="m-card" role="dialog" aria-modal="true"><button class="m-x" aria-label="Yopish">×</button><div id="m-body"></div></div></div>
+
+<a class="fab" href="https://t.me/aivauz" target="_blank" rel="noopener" aria-label="Telegramda yozish"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m22 3-20 8 6 2 2 7 3-4 5 4z"/><path d="m8 13 9-6"/></svg></a>
+
+<script>
+(function(){
+  var $=function(s,c){return (c||document).querySelector(s)},$$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+
+  // marquee
+  var proj=['heavy.kz','uhm.uz','amirtea.uz','stoneart.by','freshdoze.uz','armad.by','wellastore.uz','rosha.kz','dynasty-i.kz','atalas.kz','ecobmz.by','asu-sp.by'];
+  var m=$('#marq'),h='';for(var k=0;k<2;k++)proj.forEach(function(p){h+='<span>'+p+'</span>'});m.innerHTML=h;
+
+  // progress
+  var prog=$('#prog');
+  function sc(){var d=document.documentElement;prog.style.width=(d.scrollTop/(d.scrollHeight-d.clientHeight)*100)+'%'}
+  addEventListener('scroll',sc,{passive:true});sc();
+
+  // reveal
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  $$('.rv').forEach(function(el){io.observe(el)});
+
+  // counters
+  var co=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var el=e.target,n=+el.dataset.n,t0=null;
+    function f(t){t0=t0||t;var p=Math.min((t-t0)/1400,1);el.textContent=Math.round(n*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)}
+    requestAnimationFrame(f);co.unobserve(el)})},{threshold:.5});
+  $$('[data-n]').forEach(function(el){co.observe(el)});
+
+  // service modal
+  var modal=$('#modal'),mb=$('#m-body');
+  function openM(c){
+    mb.innerHTML='<div class="ico">'+$('.ico',c).innerHTML+'</div><h3>'+$('h3',c).innerHTML+'</h3><div class="price-tag">'+$('.price-tag',c).innerHTML+'</div>'+$('.acc-in',c).innerHTML+'<a class="btn btn-p" href="#contact">Buyurtma berish</a>';
+    modal.classList.add('on');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';
+    $('a.btn',mb).addEventListener('click',closeM);
+  }
+  function closeM(){modal.classList.remove('on');modal.setAttribute('aria-hidden','true');document.body.style.overflow=''}
+  $$('.svc').forEach(function(c){
+    $('.svc-h',c).addEventListener('click',function(){openM(c)});
+    $('.more',c).addEventListener('click',function(){openM(c)});
+    c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px')});
+  });
+  $('.m-x').addEventListener('click',closeM);
+  modal.addEventListener('click',function(e){if(e.target===modal)closeM()});
+  addEventListener('keydown',function(e){if(e.key==='Escape')closeM()});
+  $$('.hc-item').forEach(function(a){a.addEventListener('click',function(e){var c=$(a.getAttribute('href'));if(c&&c.classList.contains('svc')){e.preventDefault();openM(c)}})});
+  // faq
+  $$('.faq').forEach(function(f){$('button',f).addEventListener('click',function(){var o=f.classList.toggle('open');this.setAttribute('aria-expanded',o)})});
+
+  // tabs
+  $$('.tab').forEach(function(b){b.addEventListener('click',function(){
+    $$('.tab').forEach(function(x){x.classList.remove('on')});b.classList.add('on');
+    $$('.panel').forEach(function(p){p.classList.remove('on')});$('#p-'+b.dataset.t).classList.add('on')})});
+
+  // calculators
+  var fmt=function(n){return Math.round(n).toLocaleString('ru-RU').replace(/ | /g,' ')};
+  $$('.ctab').forEach(function(b){b.addEventListener('click',function(){
+    $$('.ctab').forEach(function(x){x.classList.remove('on')});b.classList.add('on');
+    $$('.calc').forEach(function(x){x.classList.remove('on')});$('#c-'+b.dataset.c).classList.add('on')})});
+  function sel(r,g){return $('.opts[data-g="'+g+'"] .opt.on',r)}
+  var SEO={1:3500000,3:10500000,6:19800000,12:39000000};
+  var EMPTY='<li style="color:var(--mut)">Chapdagi kerakli xizmatlarni yoqing</li>';
+  function render(){
+    var t=0,li='';
+    $$('#box-once .crow.on').forEach(function(r){
+      var n=$('b',r).textContent,a=0,tag='';
+      if(r.dataset.k==='land'){a=+r.dataset.o}
+      else{var tr=sel(r,'tier'),cb=sel(r,'cab');a=+tr.dataset.o*(+cb.dataset.mul);tag=' · '+tr.dataset.nm+' × '+cb.dataset.mul}
+      t+=a;li+='<li>'+n+tag+'<span>'+fmt(a)+'</span></li>';
+    });
+    $('#once-t').textContent=fmt(t);$('#once-l').innerHTML=li||EMPTY;
+    var m=+$('#months .opt.on').dataset.v,tm=0,sv=0,lm='';
+    $$('#box-month .crow.on').forEach(function(r){
+      var n=$('b',r).textContent,a=0,tag='',k=r.dataset.k;
+      if(k==='seo'){a=SEO[m];sv=3500000*m-a}
+      else if(k==='geo'){a=5000000*m}
+      else if(k==='smm'){var tr=sel(r,'tier');a=+tr.dataset.m*m;tag=' · '+tr.dataset.nm}
+      else if(k==='adsup'){var cb=sel(r,'cab');a=2000000*(+cb.dataset.mul)*m;tag=' · '+cb.dataset.mul+' kab.'}
+      tm+=a;lm+='<li>'+n+tag+'<span>'+fmt(a)+'</span></li>';
+    });
+    $('#m-n').textContent=m;$('#m-t').textContent=fmt(tm);$('#m-avg').textContent=fmt(tm/m);
+    $('#m-save').textContent=sv>0?'SEO boʻyicha tejam: '+fmt(sv)+' soʻm':'';
+    $('#m-l').innerHTML=lm||EMPTY;
+  }
+  $$('.crow').forEach(function(r){
+    $('.chead',r).addEventListener('click',function(){r.classList.toggle('on');$('.sw',r).classList.toggle('on');render()});
+    $$('.opt',r).forEach(function(o){o.addEventListener('click',function(){$$('.opt',o.parentNode).forEach(function(x){x.classList.remove('on')});o.classList.add('on');render()})});
+  });
+  $$('#months .opt').forEach(function(o){o.addEventListener('click',function(){$$('#months .opt').forEach(function(x){x.classList.remove('on')});o.classList.add('on');render()})});
+  [['#box-once','land'],['#box-once','adset'],['#box-month','seo'],['#box-month','smm']].forEach(function(x){var r=$(x[0]+' [data-k="'+x[1]+'"]');r.classList.add('on');$('.sw',r).classList.add('on')});
+  render();
+
+  // nav active
+
+  var secs=['services','pricing','calc','process','faq'].map(function(i){return document.getElementById(i)});
+  var links=$$('#menu a');
+  var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})}})},{rootMargin:'-45% 0px -50% 0px'});
+  secs.forEach(function(s){so.observe(s)});
+
+  // hero tilt
+  var tl=$('#tilt');
+  if(matchMedia('(hover:hover) and (min-width:961px)').matches){
+    tl.addEventListener('pointermove',function(e){var r=tl.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;tl.style.transform='perspective(900px) rotateY('+x*8+'deg) rotateX('+(-y*8)+'deg)'});
+    tl.addEventListener('pointerleave',function(){tl.style.transform=''});
+  }
+})();
+</script>
+</body>
+</html>
