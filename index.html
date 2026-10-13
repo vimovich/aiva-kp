@@ -49,6 +49,7 @@ nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:90;width
   display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 12px 10px 20px;border-radius:999px;
   background:rgba(12,18,38,.62);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid var(--line);transition:.3s}
 .logo{font-family:var(--fd);font-weight:700;font-size:15px;letter-spacing:.04em;display:flex;align-items:center;gap:10px}
+.logo-img{height:30px;width:auto;display:block;filter:brightness(0) invert(1)}
 .logo b{width:30px;height:30px;border-radius:9px;background:var(--grad);display:grid;place-items:center;font-size:15px;color:#fff;box-shadow:0 6px 20px rgba(99,102,241,.5)}
 .menu{display:flex;gap:4px}
 .menu a{font-size:13.5px;font-weight:600;color:var(--mut);padding:8px 14px;border-radius:999px;transition:.2s}
@@ -65,7 +66,11 @@ nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:90;width
 .pill{display:inline-flex;align-items:center;gap:10px;padding:7px 16px 7px 8px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.04);font-size:13px;color:var(--mut);margin-bottom:18px}
 .pill span{background:var(--c);width:9px;height:9px;border-radius:50%;box-shadow:0 0 0 0 rgba(34,211,166,.7);animation:pulse 2s infinite;margin-left:6px}
 @keyframes pulse{70%{box-shadow:0 0 0 10px rgba(34,211,166,0)}100%{box-shadow:0 0 0 0 rgba(34,211,166,0)}}
-h1{font-family:var(--fd);font-weight:700;font-size:clamp(28px,4.3vw,56px);line-height:1.1;letter-spacing:-.03em;margin-bottom:20px}
+h1{font-family:var(--fd);font-weight:700;font-size:clamp(22px,3vw,38px);line-height:1.12;letter-spacing:-.025em;margin-bottom:20px}
+h1 span,h1 em{display:block}
+.h1b{font-size:.6em;font-weight:500;color:var(--mut);letter-spacing:0;margin-top:.5em}
+h1 em.h1c{font-size:1.32em;line-height:1.05;margin:.1em 0 .18em}
+.h1d{font-size:.62em;font-weight:500;color:#cfd8f5;letter-spacing:0}
 .hero .lead{font-size:clamp(15px,1.6vw,17px);margin-bottom:26px}
 .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center}
 .cta-row{display:flex;gap:14px;flex-wrap:wrap}
@@ -112,7 +117,10 @@ h1{font-family:var(--fd);font-weight:700;font-size:clamp(28px,4.3vw,56px);line-h
 .price-tag{font-weight:800;font-size:15px}
 .price-tag small{color:var(--mut);font-weight:500}
 .more{display:flex;align-items:center;justify-content:space-between;padding:13px 24px;border-top:1px solid var(--line);font-size:13.5px;font-weight:700;color:var(--a);width:100%}
-.more i{width:26px;height:26px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:.3s;font-style:normal;font-size:16px;line-height:1}
+.more i{width:26px;height:26px;border-radius:50%;border:1px solid var(--line);position:relative;flex:none;transition:.3s}
+.pm::before,.pm::after{content:"";position:absolute;left:50%;top:50%;background:currentColor;border-radius:2px;transition:.3s}
+.pm::before{width:11px;height:2px;margin:-1px 0 0 -5.5px}
+.pm::after{width:2px;height:11px;margin:-5.5px 0 0 -1px}
 .svc:hover .more i{background:var(--a);color:#06101f;border-color:var(--a)}
 .acc{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s cubic-bezier(.2,.8,.2,1)}
 .svc.open .acc,.faq.open .acc{grid-template-rows:1fr}
@@ -191,7 +199,7 @@ h1{font-family:var(--fd);font-weight:700;font-size:clamp(28px,4.3vw,56px);line-h
 .faq{border-radius:18px;border:1px solid var(--line);background:var(--card);overflow:hidden;transition:.3s}
 .faq.open{border-color:rgba(130,140,255,.45)}
 .faq>button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 24px;text-align:left;font-weight:700;font-size:16px}
-.faq>button i{width:28px;height:28px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;flex:none;transition:.3s;font-style:normal;font-size:17px}
+.faq>button i{width:28px;height:28px;border-radius:50%;border:1px solid var(--line);position:relative;flex:none;transition:.3s}
 .faq.open>button i{transform:rotate(45deg);background:var(--a);color:#06101f;border-color:var(--a)}
 .faq .acc-in{padding:0 24px 22px;color:var(--mut);font-size:15px}
 
@@ -279,7 +287,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
 <div class="grid-bg"></div>
 
 <nav>
-  <a href="#top" class="logo"><b>A</b><span>AIVA GROUP</span></a>
+  <a href="#top" class="logo" aria-label="AIVA Group"><img src="logo.svg" alt="AIVA Group" class="logo-img"></a>
   <div class="menu" id="menu">
     <a href="#services">Услуги</a>
     <a href="#pricing">Тарифы</a>
@@ -295,7 +303,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
   <div class="wrap hero-grid">
     <div>
       <div class="pill rv"><span></span>Коммерческое предложение · 2026</div>
-      <h1 class="rv d1">Интернет-маркетинг, который <em>приводит клиентов</em>, а не просто «трафик»</h1>
+      <h1 class="rv d1"><span class="h1a">Интернет-маркетинг,</span><span class="h1b">который</span><em class="h1c">приводит клиентов,</em><span class="h1d">а не просто «трафик»</span></h1>
       <p class="lead rv d2">AIVA GROUP — веб-студия из Ташкента. Создаём сайты и выстраиваем весь путь клиента: от поиска в Google, Яндексе и ИИ — до заявки в вашей CRM. Ниже — все наши услуги и прозрачные цены.</p>
       <div class="cta-row rv d3">
         <a href="#calc" class="btn btn-p">Рассчитать стоимость
@@ -357,9 +365,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
             <li>WordPress / WooCommerce, 1С-Битрикс, фреймворки</li>
             <li><b>Сопровождение сайта</b> (по запросу): обновления, резервные копии, защита от взлома, контроль скорости, правки контента; хостинг и домены можем взять на себя</li>
           </ul>
-          <div class="note">Оплата: предоплата 50%, остаток — после сдачи проекта. Стоимость больших проектов рассчитываем по смете.</div>
+          <div class="note">Условия оплаты фиксируем в договоре. Стоимость больших проектов рассчитываем по смете.</div>
         </div></div></div>
-        <button class="more" tabindex="-1" aria-hidden="true">Подробнее <i>+</i></button>
+        <button class="more" tabindex="-1" aria-hidden="true">Подробнее <i class="pm"></i></button>
       </article>
 
       <article class="svc rv d1" id="s-seo">
@@ -376,11 +384,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
             <li><b>Техника:</b> мета-теги, Schema.org, sitemap, Core Web Vitals, перелинковка</li>
             <li><b>Контент:</b> SEO-тексты, статьи, оптимизация под ИИ-поиск</li>
             <li><b>Ссылки:</b> белые методы, каталоги, карты, крауд-маркетинг</li>
-            <li><b>Отчёт:</b> Analytics и Метрика, ежемесячный отчёт по позициям, трафику и заявкам</li>
+            <li><b>Отчёт:</b> Analytics и Метрика, ежемесячный отчёт по аналитике и еженедельные промежуточные отчёты</li>
           </ul>
           <div class="note">Первые сдвиги позиций — через 1–2 месяца, заметный рост трафика — через 3–6 месяцев.</div>
         </div></div></div>
-        <button class="more" tabindex="-1" aria-hidden="true">Подробнее <i>+</i></button>
+        <button class="more" tabindex="-1" aria-hidden="true">Подробнее <i class="pm"></i></button>
       </article>
 
       <article class="svc rv d2" id="s-geo">
@@ -398,7 +406,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
           </ul>
           <div class="note">Всё чаще клиенты задают вопрос ИИ, а не поисковику — GEO закрывает этот канал заранее.</div>
         </div></div></div>
-        <button class="more" tabindex="-1" aria-hidden="true">Подробнее <i>+</i></button>
+        <button class="more" tabindex="-1" aria-hidden="true">Подробнее <i class="pm"></i></button>
       </article>
 
       <article class="svc rv" id="s-smm">
@@ -418,7 +426,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
           </ul>
           <div class="note">Это SMM, а не мобилография: мы ведём аккаунт и монтируем контент. Съёмка и выезды согласовываются отдельно, вне бюджета тарифов. Рекламный бюджет Instagram оплачивается отдельно.</div>
         </div></div></div>
-        <button class="more" tabindex="-1" aria-hidden="true">Подробнее <i>+</i></button>
+        <button class="more" tabindex="-1" aria-hidden="true">Подробнее <i class="pm"></i></button>
       </article>
 
       <article class="svc rv d1" id="s-ads">
@@ -439,7 +447,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
           </ul>
           <div class="note">Рекламный бюджет оплачивается напрямую в Google / Яндекс и в стоимость не входит.</div>
         </div></div></div>
-        <button class="more" tabindex="-1" aria-hidden="true">Подробнее <i>+</i></button>
+        <button class="more" tabindex="-1" aria-hidden="true">Подробнее <i class="pm"></i></button>
       </article>
 
       <article class="svc rv" id="s-crm">
@@ -457,7 +465,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
             <li>Обучение сотрудников и поддержка</li>
           </ul>
         </div></div></div>
-        <button class="more" tabindex="-1" aria-hidden="true">Подробнее <i>+</i></button>
+        <button class="more" tabindex="-1" aria-hidden="true">Подробнее <i class="pm"></i></button>
       </article>
 
     </div>
@@ -535,7 +543,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
         <div class="plan"><h4>Корпоративный сайт</h4><div class="pr">по смете</div><div class="sub">Срок 1–2 недели</div><ul class="ticks"><li>Компания, услуги, команда</li><li>SEO-основа и адаптив</li></ul></div>
         <div class="plan"><h4>Интернет-магазин</h4><div class="pr">по смете</div><div class="sub">Срок от 3 недель</div><ul class="ticks"><li>Каталог, корзина, оплата, доставка</li><li>Интеграция с 1С</li></ul></div>
       </div>
-      <p class="pnote">Условия оплаты: предоплата 50%, остаток — после сдачи проекта. Веб-сервисы (кабинеты, калькуляторы, порталы) — по техническому заданию.</p>
+      <p class="pnote">Работаем по юридическому договору, условия оплаты фиксируем в нём. Веб-сервисы (кабинеты, калькуляторы, порталы) — по техническому заданию.</p>
     </div>
   </div>
 </section>
@@ -575,7 +583,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
         <hr>
         <ul id="once-l"></ul>
         <a class="btn btn-p" href="#contact">Обсудить расчёт</a>
-        <p style="font-size:12px;color:var(--mut);margin-top:12px">Корпоративные сайты, интернет-магазины и CRM считаем по смете после аудита. Предоплата 50%.</p>
+        <p style="font-size:12px;color:var(--mut);margin-top:12px">Корпоративные сайты, интернет-магазины и CRM считаем по смете после аудита. Работаем по договору.</p>
       </aside>
     </div>
 
@@ -635,7 +643,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
       <div class="step rv"><div class="n">01</div><h4>Бесплатный аудит</h4><p>Анализируем сайт, конкурентов и текущие позиции, определяем точки роста.</p><small>1–3 дня</small></div>
       <div class="step rv d1"><div class="n">02</div><h4>Стратегия и смета</h4><p>Согласуем цели, каналы и бюджет. Фиксируем всё в договоре.</p><small>до 3 дней</small></div>
       <div class="step rv d2"><div class="n">03</div><h4>Запуск работ</h4><p>Техника, семантика, контент, реклама, дизайн — стартуем по плану.</p><small>с 1-й недели</small></div>
-      <div class="step rv d3"><div class="n">04</div><h4>Отчёты и рост</h4><p>Ежемесячный отчёт по позициям, трафику и заявкам, корректировка стратегии.</p><small>каждый месяц</small></div>
+      <div class="step rv d3"><div class="n">04</div><h4>Отчёты и рост</h4><p>Еженедельные промежуточные отчёты и ежемесячный отчёт по аналитике, корректировка стратегии.</p><small>каждую неделю и месяц</small></div>
     </div>
   </div>
 </section>
@@ -646,11 +654,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
     <div class="eyebrow rv">Условия</div>
     <h2 class="rv">Важные <em>детали</em></h2>
     <div class="faqs">
-      <div class="faq rv"><button aria-expanded="false">Что входит в стоимость, а что оплачивается отдельно?<i>+</i></button><div class="acc"><div><div class="acc-in">В стоимость входят работы специалистов AIVA GROUP. Рекламные бюджеты (Google Ads, Яндекс.Директ, таргет в Instagram) оплачиваются отдельно, напрямую в рекламные системы. Съёмка контента для SMM согласуется отдельно.</div></div></div></div>
-      <div class="faq rv"><button aria-expanded="false">Как происходит оплата?<i>+</i></button><div class="acc"><div><div class="acc-in">Разработка сайтов — предоплата 50%, остаток после сдачи. Продвижение, SMM и сопровождение рекламы — ежемесячно. Документы отправляем через Didox, работаем по договору.</div></div></div></div>
-      <div class="faq rv"><button aria-expanded="false">Когда будут первые результаты?<i>+</i></button><div class="acc"><div><div class="acc-in">Контекстная реклама даёт первые заявки уже в первые недели после запуска. В SEO позиции начинают меняться через 1–2 месяца, а заметный рост трафика приходит через 3–6 месяцев.</div></div></div></div>
-      <div class="faq rv"><button aria-expanded="false">Как вы отчитываетесь?<i>+</i></button><div class="acc"><div><div class="acc-in">Каждый месяц — отчёт по позициям, трафику и заявкам, а не по «показам». Настраиваем Google Analytics и Яндекс.Метрику и показываем реальные цифры.</div></div></div></div>
-      <div class="faq rv"><button aria-expanded="false">Можно ли взять только часть услуг?<i>+</i></button><div class="acc"><div><div class="acc-in">Да. Каждое направление продаётся отдельно, а лучший эффект даёт связка: сайт + SEO + реклама + CRM. Соберите пакет в калькуляторе выше.</div></div></div></div>
+      <div class="faq rv"><button aria-expanded="false">Что входит в стоимость, а что оплачивается отдельно?<i class="pm"></i></button><div class="acc"><div><div class="acc-in">В стоимость входят работы специалистов AIVA GROUP. Рекламные бюджеты (Google Ads, Яндекс.Директ, таргет в Instagram) оплачиваются отдельно, напрямую в рекламные системы. Съёмка контента для SMM согласуется отдельно.</div></div></div></div>
+      <div class="faq rv"><button aria-expanded="false">Как происходит оплата?<i class="pm"></i></button><div class="acc"><div><div class="acc-in">Работаем официально, по юридическому договору: в нём фиксируем объём работ, сроки и стоимость. Предоставляем все закрывающие документы и обмениваемся ими через Didox. Порядок оплаты согласуем индивидуально и закрепляем в договоре.</div></div></div></div>
+      <div class="faq rv"><button aria-expanded="false">Когда будут первые результаты?<i class="pm"></i></button><div class="acc"><div><div class="acc-in">Контекстная реклама даёт первые заявки уже в первые недели после запуска. В SEO позиции начинают меняться через 1–2 месяца, а заметный рост трафика приходит через 3–6 месяцев.</div></div></div></div>
+      <div class="faq rv"><button aria-expanded="false">Как вы отчитываетесь?<i class="pm"></i></button><div class="acc"><div><div class="acc-in">Раз в месяц — полный отчёт по аналитике: позиции, трафик и заявки, а не «показы». Кроме того, каждую неделю присылаем промежуточный отчёт: что сделано и как меняются показатели. Настраиваем Google Analytics и Яндекс.Метрику, поэтому вы всегда видите реальные цифры.</div></div></div></div>
+      <div class="faq rv"><button aria-expanded="false">Можно ли взять только часть услуг?<i class="pm"></i></button><div class="acc"><div><div class="acc-in">Да. Каждое направление продаётся отдельно, а лучший эффект даёт связка: сайт + SEO + реклама + CRM. Соберите пакет в калькуляторе выше.</div></div></div></div>
     </div>
   </div>
 </section>
@@ -676,7 +684,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
   </div>
 </section>
 
-<footer><div class="wrap"><span>© 2026 AIVA GROUP · Google Premier Partner</span><span>Цены указаны в сумах · предложение действительно 30 дней</span></div></footer>
+<footer><div class="wrap"><span><img src="logo.svg" alt="AIVA Group" class="logo-img" style="height:22px;display:inline-block;vertical-align:middle;margin-right:10px;opacity:.8">© 2026 · Google Premier Partner</span><span>Цены указаны в сумах · предложение действительно 30 дней</span></div></footer>
 
 <div class="modal" id="modal" aria-hidden="true"><div class="m-card" role="dialog" aria-modal="true"><button class="m-x" aria-label="Закрыть">×</button><div id="m-body"></div></div></div>
 
