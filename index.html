@@ -66,11 +66,7 @@ nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:90;width
 .pill{display:inline-flex;align-items:center;gap:10px;padding:7px 16px 7px 8px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.04);font-size:13px;color:var(--mut);margin-bottom:18px}
 .pill span{background:var(--c);width:9px;height:9px;border-radius:50%;box-shadow:0 0 0 0 rgba(34,211,166,.7);animation:pulse 2s infinite;margin-left:6px}
 @keyframes pulse{70%{box-shadow:0 0 0 10px rgba(34,211,166,0)}100%{box-shadow:0 0 0 0 rgba(34,211,166,0)}}
-h1{font-family:var(--fd);font-weight:700;font-size:clamp(22px,3vw,38px);line-height:1.12;letter-spacing:-.025em;margin-bottom:20px}
-h1 span,h1 em{display:block}
-.h1b{font-size:.6em;font-weight:500;color:#fff;letter-spacing:0;margin-top:.5em}
-h1 em.h1c{font-size:1.32em;line-height:1.05;margin:.1em 0 .18em}
-.h1d{font-size:.62em;font-weight:500;color:#fff;letter-spacing:0}
+h1{font-family:var(--fd);font-weight:700;font-size:clamp(25px,3.3vw,44px);line-height:1.12;letter-spacing:-.025em;margin-bottom:20px;overflow-wrap:break-word}
 .hero .lead{font-size:clamp(15px,1.6vw,17px);margin-bottom:26px}
 .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center}
 .cta-row{display:flex;gap:14px;flex-wrap:wrap}
@@ -303,7 +299,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
   <div class="wrap hero-grid">
     <div>
       <div class="pill rv"><span></span>Коммерческое предложение · 2026</div>
-      <h1 class="rv d1"><span class="h1a">Интернет-маркетинг,</span><span class="h1b">который</span><em class="h1c">приводит клиентов,</em><span class="h1d">а не просто «трафик»</span></h1>
+      <h1 class="rv d1">Интернет-маркетинг, который <em>приводит клиентов</em>, а не просто «трафик»</h1>
       <p class="lead rv d2">AIVA GROUP — веб-студия из Ташкента. Создаём сайты и выстраиваем весь путь клиента: от поиска в Google, Яндексе и ИИ — до заявки в вашей CRM. Ниже — все наши услуги и прозрачные цены.</p>
       <div class="cta-row rv d3">
         <a href="#calc" class="btn btn-p">Рассчитать стоимость
