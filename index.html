@@ -1382,7 +1382,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
     stepParticles(dt); stepSprites(dt); stepRipples(dt);
     if (S.mode === 'typing' || S.mode === 'term' || S.flash > 0 || t - lastDraw > .1) { lastDraw = t; drawScreen(); }
   }
-  var lastDraw = 0;
+  var lastDraw = -1;
   function render() { renderer.render(scene, camera); }
   function loop() {
     if (!running) return; raf = requestAnimationFrame(loop);
@@ -1397,7 +1397,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
   /* ---------- sizing ---------- */
   function resize() {
     var r = view.getBoundingClientRect(); var w = Math.max(200, r.width), h = Math.max(200, r.height);
-    renderer.setSize(w, h, false); camera.aspect = w / h; camera.updateProjectionMatrix(); pMat.uniforms.uScale.value = DPR * h * .42; if (!running) { drawScreen(); render(); }
+    renderer.setSize(w, h, false); camera.aspect = w / h; camera.updateProjectionMatrix(); pMat.uniforms.uScale.value = DPR * h * .42; if (!running) { update(0.001); render(); }
   }
   if (window.ResizeObserver) new ResizeObserver(resize).observe(view); else window.addEventListener('resize', resize);
 
@@ -1422,10 +1422,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
 
   /* ---------- boot ---------- */
   setScript(0, true);           // idle state: first script already "written"
-  resize(); drawScreen(); render();
+  resize(); update(0.001); render();
   stage.classList.add('lt-ready');
   start();
-  window.AivaLaptop = { stop: stop, activate: activate, set: function (i, inst) { setScript(i, inst !== false); drawScreen(); }, pulse: pulseChip, draw: drawScreen, state: S, scene: scene, camera: camera };
+  window.AivaLaptop = { tick: function (dt) { update(dt || .016); render(); }, stop: stop, activate: activate, set: function (i, inst) { setScript(i, inst !== false); drawScreen(); }, pulse: pulseChip, draw: drawScreen, state: S, scene: scene, camera: camera };
 })();
 
 </script>
