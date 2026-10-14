@@ -1,0 +1,145 @@
+---
+// Одна и та же страница для обоих языков: всё содержимое берётся из t (src/data/<язык>.json).
+import Base from '../layouts/Base.astro';
+import site from '../data/site.json';
+import shared from '../data/shared.json';
+
+const { t, pricingHtml, calcHtml } = Astro.props;
+const other = t.lang === 'ru' ? { href: '/uz', code: 'UZ' } : { href: '/', code: 'RU' };
+// неразрывный пробел после коротких слов («CRM и автоматизация», «CRM va avtomatlashtirish»)
+const nb = (s) => s.trim().replace(/(^|[^\p{L}\p{N}_])(\p{L}{1,2}) /gu, (m, a, b) => a + b + ' ');
+const ui = { ...t.ui };
+const arrow = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+const cursor = '<svg class="i-cur" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 9l5 12 1.8-5.2L21 14z"/><path d="M7.2 3.5L7 6M3.5 7.2L6 7M11.5 4.6l-1.5 1.7M4.6 11.5l1.7-1.5"/></svg>';
+const replay = '<svg class="i-rep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 12a8.5 8.5 0 1 0 2.7-6.2"/><path d="M3.5 4v4.6h4.6"/></svg>';
+---
+<Base t={t}>
+<div class="progress" id="prog"></div>
+<div class="aurora"><i></i><i></i><i></i></div>
+<div class="grid-bg"></div>
+
+<nav>
+  <a href="#top" class="logo" aria-label="AIVA Group"><img src="/logo.svg" alt="AIVA Group" class="logo-img"></a>
+  <div class="menu" id="menu">
+    {t.nav.links.map((l) => <a href={l.href}>{l.label}</a>)}
+  </div>
+  <div class="nav-r"><div class="lang" role="group" aria-label="Language">
+    <a href="/" hreflang="ru" class={t.lang === 'ru' ? 'on' : ''} aria-current={t.lang === 'ru' ? 'true' : undefined}>RU</a><a href="/uz" hreflang="uz" class={t.lang === 'uz' ? 'on' : ''} aria-current={t.lang === 'uz' ? 'true' : undefined}>UZ</a>
+  </div><a class="btn btn-p nav-cta" href="#contact">{t.nav.cta}</a></div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="wrap hero-grid lt-grid">
+    <div>
+      <div class="pill rv"><span></span>{t.hero.pill}</div>
+      <h1 class="rv d1" set:html={t.hero.h1}></h1>
+      <p class="lead rv d2" set:html={t.hero.lead}></p>
+      <div class="cta-row rv d3">
+        <a href="#calc" class="btn btn-p">{t.hero.ctaCalc}<Fragment set:html={arrow} /></a>
+        <a href="#services" class="btn btn-g">{t.hero.ctaServices}</a>
+      </div>
+    </div>
+    <!-- 3D-ноутбук (Three.js, /laptop.js). Плашки услуг берутся из data/<язык>.json → chips -->
+    <aside class="lt-stage rv d2" id="lt" data-lang={t.lang} aria-label={t.hero.ltAria}>
+      <div class="lt-glow"></div>
+      <div class="lt-view"><canvas tabindex="0" aria-hidden="true"></canvas><button class="lt-hint" type="button"><Fragment set:html={cursor + replay} /><span>{t.hero.ltHint}</span></button></div>
+      <ul class="lt-chips">
+        {t.chips.map((c) => <li><a class="lt-chip" data-svc={c.id} href={`#s-${c.id}`}><Fragment set:html={shared.chipIcons[c.id]} /><span>{nb(c.label)}<small>{c.price}</small></span></a></li>)}
+      </ul>
+    </aside>
+  </div>
+</header>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="wrap">
+    <div class="stats-row rv">
+      {t.stats.map((s) => <div class="stat"><b class="grad-text" set:html={s.value}></b><span>{s.label}</span></div>)}
+    </div>
+    <div class="marq" aria-label={t.lang === 'ru' ? 'Наши проекты' : 'Loyihalarimiz'}>
+      <div class="marq-t" id="marq" data-projects={JSON.stringify(site.projects)}></div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="eyebrow rv">{t.services.eyebrow}</div>
+    <h2 class="rv" set:html={t.services.h2}></h2>
+    <p class="lead rv">{t.services.lead}</p>
+    <div class="bento">
+      {t.services.items.map((s) => (
+        <article class={`svc rv ${s.delay}`.trim()} id={`s-${s.id}`}>
+          <button class="svc-h" aria-expanded="false">
+            <div class="ico" set:html={shared.icons[s.id]}></div>
+            <h3 set:html={s.title}></h3>
+            <p>{s.blurb}</p>
+            <div class="price-tag" set:html={s.price}></div>
+          </button>
+          <div class="acc"><div><div class="acc-in" set:html={s.details}></div></div></div>
+          <button class="more" tabindex="-1" aria-hidden="true">{s.more} <i class="pm"></i></button>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- PRICING (src/content/<язык>/pricing.html) -->
+<Fragment set:html={pricingHtml} />
+
+<!-- CALCULATOR (src/content/<язык>/calc.html) -->
+<Fragment set:html={calcHtml} />
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="wrap">
+    <div class="eyebrow rv">{t.process.eyebrow}</div>
+    <h2 class="rv" set:html={t.process.h2}></h2>
+    <div class="steps">
+      {t.process.steps.map((s) => <div class={`step rv ${s.delay}`.trim()}><div class="n">{s.n}</div><h4>{s.title}</h4><p set:html={s.text}></p><small>{s.meta}</small></div>)}
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="eyebrow rv">{t.faq.eyebrow}</div>
+    <h2 class="rv" set:html={t.faq.h2}></h2>
+    <div class="faqs">
+      {t.faq.items.map((f) => <div class="faq rv"><button aria-expanded="false"><Fragment set:html={f.q} /><i class="pm"></i></button><div class="acc"><div><div class="acc-in" set:html={f.a}></div></div></div></div>)}
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="cta-card rv">
+      <div class="eyebrow" style="color:#fff">{t.contact.eyebrow}</div>
+      <h2>{t.contact.h2}</h2>
+      <p class="lead">{t.contact.lead}</p>
+      <div class="cgrid">
+        {t.contact.links.map((l) => <a class="cl" href={l.href} target={l.ext ? '_blank' : undefined} rel={l.ext ? 'noopener' : undefined}><Fragment set:html={l.icon} /><div><small>{l.label}</small><b>{l.value}</b></div></a>)}
+      </div>
+      <div class="cta-btns">
+        <a class="btn btn-w" href={site.telegram} target="_blank" rel="noopener">{t.contact.btnTg}</a>
+        <a class="btn btn-g" href={`tel:${site.phone}`} style="border-color:rgba(255,255,255,.4)">{t.contact.btnCall}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap"><span><img src="/logo.svg" alt="AIVA Group" class="logo-img" style="height:22px;display:inline-block;vertical-align:middle;margin-right:10px;opacity:.8">{t.footer.left}</span><span>{t.footer.right}</span></div></footer>
+
+<div class="modal" id="modal" aria-hidden="true"><div class="m-card" role="dialog" aria-modal="true"><button class="m-x" aria-label={t.modal.close}>×</button><div id="m-body"></div></div></div>
+
+<a class="fab" href={site.telegram} target="_blank" rel="noopener" aria-label={t.fab.aria}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m22 3-20 8 6 2 2 7 3-4 5 4z"/><path d="m8 13 9-6"/></svg></a>
+
+<script is:inline define:vars={{ T: ui }}>window.__T = T;</script>
+<script src="../scripts/site.js"></script>
+<script is:inline src="/three.min.js"></script>
+<script is:inline src="/laptop.js"></script>
+</Base>
