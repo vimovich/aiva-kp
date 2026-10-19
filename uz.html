@@ -20,7 +20,7 @@ gtag('js',new Date());gtag('config','G-1YMGZEBJGH');
   document.addEventListener('click',function(e){
     var a=e.target.closest&&e.target.closest('a,button');if(!a)return;
     var h=a.getAttribute('href')||'';
-    if(h.indexOf('t.me/aivauz')>-1){track('generate_lead',{method:'telegram',place:a.classList.contains('fab')?'float_button':(a.closest('footer')?'footer':'contact')});track('click_telegram')}
+    if(h.indexOf('t.me/aivauz')>-1){track('generate_lead',{method:'telegram',place:a.classList.contains('fab')?'float_button':(a.closest('.sum')?'calc':(a.closest('footer')?'footer':'contact'))});track('click_telegram')}
     else if(h.indexOf('tel:')===0){track('generate_lead',{method:'phone'});track('click_phone')}
     else if(a.classList.contains('lt-chip')){track('service_click',{service:a.getAttribute('data-svc')||''})}
     else if(h==='#contact'){track('cta_contact',{label:(a.textContent||'').trim().slice(0,40)})}
@@ -701,7 +701,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
         <div class="lbl">soʻm, bir marta</div>
         <hr>
         <ul id="once-l"></ul>
-        <a class="btn btn-p" href="#contact">Hisob-kitobni muhokama qilish</a>
+        <a class="btn btn-p" id="tg-once" href="https://t.me/aivauz?text=Assalomu%20alaykum%21%20Iltimos%2C%20tijoriy%20taklif%20bering.%20%28commercial-offer.uz%20saytidan%20xabar%29" target="_blank" rel="noopener">Hisob-kitobni muhokama qilish</a>
         <p style="font-size:12px;color:var(--mut);margin-top:12px">Korporativ saytlar, internet-doʻkonlar va CRM auditdan soʻng smeta boʻyicha hisoblanadi. Shartnoma asosida ishlaymiz.</p>
       </aside>
     </div>
@@ -746,7 +746,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
         <div class="lbl" id="m-save" style="color:var(--c)"></div>
         <hr>
         <ul id="m-l"></ul>
-        <a class="btn btn-p" href="#contact">Hisob-kitobni muhokama qilish</a>
+        <a class="btn btn-p" id="tg-month" href="https://t.me/aivauz?text=Assalomu%20alaykum%21%20Iltimos%2C%20tijoriy%20taklif%20bering.%20%28commercial-offer.uz%20saytidan%20xabar%29" target="_blank" rel="noopener">Hisob-kitobni muhokama qilish</a>
         <p style="font-size:12px;color:var(--mut);margin-top:12px">Reklama byudjetlari va QQS kiritilmagan. SEO: 3 / 6 / 12 oy uchun 10,5 / 19,8 / 39 mln paketlar.</p>
       </aside>
     </div>
@@ -791,12 +791,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
       <p class="lead">Yozing yoki qoʻngʻiroq qiling — vazifangizga mos shaxsiy taklif tayyorlaymiz.</p>
       <div class="cgrid">
         <a class="cl" href="tel:+998900044442"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><div><small>Telefon</small><b>+998 90 004 44 42</b></div></a>
-        <a class="cl" href="https://t.me/aivauz" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m22 3-20 8 6 2 2 7 3-4 5 4z"/><path d="m8 13 9-6"/></svg><div><small>Telegram</small><b>@aivauz</b></div></a>
+        <a class="cl" href="https://t.me/aivauz?text=Assalomu%20alaykum%21%20Iltimos%2C%20tijoriy%20taklif%20bering.%20%28commercial-offer.uz%20saytidan%20xabar%29" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m22 3-20 8 6 2 2 7 3-4 5 4z"/><path d="m8 13 9-6"/></svg><div><small>Telegram</small><b>@aivauz</b></div></a>
         <a class="cl" href="https://aivagroup.uz" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z"/></svg><div><small>Sayt</small><b>aivagroup.uz</b></div></a>
         <a class="cl" href="https://yandex.uz/maps/-/CPToN-zk" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.800 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><div><small>Manzil · du–ju 10:00–19:00</small><b>Toshkent sh., Buyuk Turon koʻchasi, 77</b></div></a>
       </div>
       <div class="cta-btns">
-        <a class="btn btn-w" href="https://t.me/aivauz" target="_blank" rel="noopener">Telegramda yozish</a>
+        <a class="btn btn-w" href="https://t.me/aivauz?text=Assalomu%20alaykum%21%20Iltimos%2C%20tijoriy%20taklif%20bering.%20%28commercial-offer.uz%20saytidan%20xabar%29" target="_blank" rel="noopener">Telegramda yozish</a>
         <a class="btn btn-g" href="tel:+998900044442" style="border-color:rgba(255,255,255,.4)">Qoʻngʻiroq qilish</a>
       </div>
     </div>
@@ -807,7 +807,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
 
 <div class="modal" id="modal" aria-hidden="true"><div class="m-card" role="dialog" aria-modal="true"><button class="m-x" aria-label="Yopish">×</button><div id="m-body"></div></div></div>
 
-<a class="fab" href="https://t.me/aivauz" target="_blank" rel="noopener" aria-label="Telegramda yozish"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m22 3-20 8 6 2 2 7 3-4 5 4z"/><path d="m8 13 9-6"/></svg></a>
+<a class="fab" href="https://t.me/aivauz?text=Assalomu%20alaykum%21%20Iltimos%2C%20tijoriy%20taklif%20bering.%20%28commercial-offer.uz%20saytidan%20xabar%29" target="_blank" rel="noopener" aria-label="Telegramda yozish"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m22 3-20 8 6 2 2 7 3-4 5 4z"/><path d="m8 13 9-6"/></svg></a>
 
 <script>
 (function(){
@@ -886,6 +886,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
     $('#m-n').textContent=m;$('#m-t').textContent=fmt(tm);$('#m-avg').textContent=fmt(tm/m);
     $('#m-save').textContent=sv>0?'SEO boʻyicha tejam: '+fmt(sv)+' soʻm':'';
     $('#m-l').innerHTML=lm||EMPTY;
+    var TG={base:'https://t.me/aivauz?text=',msg:'Assalomu alaykum! Iltimos, tijoriy taklif bering. (commercial-offer.uz saytidan xabar)'};
+    function lines(ul){return $$('li',ul).map(function(li){var sp=$('span',li);return sp?li.firstChild.textContent.trim()+' — '+sp.textContent+' soʻm':''}).filter(Boolean)}
+    function link(head,ul,tot){var l=lines(ul);return TG.base+encodeURIComponent(TG.msg+(l.length?'\n\n'+head+'\n'+l.join('\n')+'\nJami: '+tot+' soʻm':''))}
+    $('#tg-once').href=link('Saytdagi hisob-kitob (bir martalik ishlar):',$('#once-l'),$('#once-t').textContent);
+    $('#tg-month').href=link('Saytdagi hisob-kitob (oylik, %s oy):'.replace('%s',m),$('#m-l'),$('#m-t').textContent);
   }
   $$('.crow').forEach(function(r){
     $('.chead',r).addEventListener('click',function(){r.classList.toggle('on');$('.sw',r).classList.toggle('on');render()});
